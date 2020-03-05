@@ -393,7 +393,7 @@ namespace PragueParking_3._0
                 command.CommandType = CommandType.StoredProcedure;
                 //Sets the return-value-parameter @AverageIncome, which then will hold 
                 //the output-variable from the stored procedure
-                SqlParameter returnValue = command.Parameters.Add("@AverageIncome", System.Data.SqlDbType.Money);
+                SqlParameter returnValue = command.Parameters.Add("@AverageIncome", SqlDbType.Money);
                 returnValue.Direction = ParameterDirection.Output;
                 command.Parameters.AddWithValue("@StartDate", startingDate);
                 command.Parameters.AddWithValue("@EndDate", endingDate);
